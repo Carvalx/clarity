@@ -16,6 +16,10 @@ h1 {
     white-space: pre-line;
 }
 
+h2 {
+    margin: 0 0 2rem 0;
+}
+
 li {
     list-style: none;
 }
@@ -143,7 +147,7 @@ li {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 0 0 3.5rem;
+    margin: 2rem 0;
 }
 
 .divisor-seccion{
@@ -151,10 +155,47 @@ li {
     flex-direction: row;
     align-items: center;
     font-weight: bolder;
+    margin: 2rem 0 0 0;
 }
 
 .icono-seccion {
-    margin: 2rem 0;
+    margin: 0;
     width: 3rem;
 }
 
+.servicios-inicio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 2.5rem 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios-inicio h3 {
+    text-decoration: underline;
+    color: #000;
+}
+
+.servicios-inicio p {
+    font-size: 0.8rem;
+}
+
+.servicios-inicio div {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.imagen-inicio a {
+    display: flex;
+    flex-direction: column;
+}
+
+.servicios-inicio img {
+    width: 5rem;
+    height: 5rem;
+}
