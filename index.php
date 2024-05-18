@@ -22,6 +22,7 @@
         ?>
     </header>
 
+    <!-- Contenido de la pagina a la que se redirige -->
     <div class="extension">
         <?php
             //Por default añade al documento dashboard.php o añadira otra pagina en caso de ser seleccionada.
@@ -36,5 +37,12 @@
             require_once $page . '.php';   
         ?>
     </div>
+
+    <!-- Pie de pagina -->
+    <footer>
+            <?php
+                require_once "footer.php"
+            ?>
+    </footer>
 </body>
 </html>
