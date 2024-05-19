@@ -25,7 +25,7 @@
     <!-- Contenido de la pagina a la que se redirige -->
     <div class="extension">
         <?php
-            //Por default añade al documento dashboard.php o añadira otra pagina en caso de ser seleccionada.
+            //Por default añade al documento inicio.php o añadira otra pagina en caso de ser seleccionada.
             if (!isset($_GET['page'])){
                 $page = 'inicio';
             }
@@ -41,7 +41,12 @@
     <!-- Pie de pagina -->
     <footer>
             <?php
-                require_once "footer.php"
+                $page = $_GET['page'];
+                
+                if($page != 'acerca-nosotros') {
+                   require_once "formulario.php";
+                }
+                require_once "footer.php";
             ?>
     </footer>
 </body>

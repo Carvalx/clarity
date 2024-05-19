@@ -3,11 +3,11 @@
     <ul>
         <li><a href="?page=inicio">INICIO</a></li>
         <li>|</li>
-        <li><a href="?page=nosotros">ACERCA DE NOSOTROS</a></li>
+        <li><a href="?page=acerca-nosotros">ACERCA DE NOSOTROS</a></li>
         <li>|</li>
         <li><a href="?page=servicios-veterinarios">SERVICIOS VETERINARIOS</a></li>
         <li>|</li>
-        <li><a href="?page=consejos">CONSEJOS</a></li>
+        <li><a href="?page=consejos">DONAR/ADOPTAR</a></li>
         <li>|</li>
         <li><a href="?page=contacto">CONTACTO</a></li>
     </ul>

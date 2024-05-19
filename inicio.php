@@ -1,6 +1,6 @@
 <div class="inicio">
     <div class="imagen-inicio">
-        <div class="imagen-titulo-inicio">
+        <div class="titulo-inicio">
             <h1>Clínica Veterinaria Clarity Pet</h1>
             <p>"Brindando lealtad y confianza inquebrantables a la salud y bienestar de tu fiel compañero."</p>
         </div>
@@ -44,7 +44,7 @@
             </div>
             <div>
                 <a href="?page=laboratorio">
-                    <img src="img/microscopio.png" alt="No image" title="Laboratorio">
+                    <img src="img/laboratorio.png" alt="No image" title="Laboratorio">
                     <h3>Laboratorio</h3>
                 </a>
                 <p>Amplia gama de servicios de laboratorio veterinario, que incluyen análisis de hemogramas, bioquímica, detección de parásitos sanguíneos. </p>
@@ -59,7 +59,7 @@
                 <p>Servicios completos que incluyen vacunación, emisión de pasaportes para viajes, y recomendaciones personalizadas para adopciones responsables.</p>
             </div>
             <div>
-                <a href="?page=alimentacion">
+                <a href="?page=tienda">
                     <img src="img/comida.png" alt="No image" title="Alimentación">
                     <h3>Alimentación</h3>
                 </a>
@@ -86,7 +86,45 @@
         <p>~~~~~~~</p><img src="img/rodolfo.png" title="Rodolfo" alt="No image" class="icono-seccion"><p>~~~~~~~</p>
     </div>
 
-    <section>
-        
+    <section class="compromiso">
+        <h2>Compromiso en la salud de tus mascotas</h2>
+        <p>
+            Clarity Pet ha cuidado de tu mascota desde 2015 en Valencia. Con los años, hemos crecido, incorporando nuevo personal y tecnología avanzada. Ahora, en nuestro nuevo local, ofrecemos mejores servicios y atención al cliente, con instalaciones óptimas y personal cualificado para el cuidado y prevención de riesgos para tu mascota.</p>
+        <img src="img/compromiso.png" alt="">
+    </section>
+
+    <div class="divisor-seccion">
+        <p>~~~~~~~</p><img src="img/pedrito.png" title="Pedrito" alt="No image" class="pedrito"><p>~~~~~~~</p>
+    </div>
+
+    <section class="tienda-inicio">
+        <h2>Clínica con tienda especializada</h2>
+        <div class="tienda-inicio-elementos">
+            <div>
+                <a href="?page=tienda" title="Alimentación">
+                    <img src="img/comida.png" alt="No image" class="Alimentación">
+                    <h3>Alimentación</h3>
+                </a>
+                <p>Encuentra todo lo que necesitas para perros, gatos, pájaros y roedores. Ofrecemos solo las mejores marcas para el cuidado de tu mascota.</p>
+            </div>
+            <div>
+                <a href="?page=tienda" title="Accesorios">
+                    <img src="img/accesorios.png" alt="No image" class="Accesorios">
+                    <h3>Accesorios</h3>
+                </a>
+                <p>Accesorios para mascotas: correas, juguetes, ropa, rascadores para gatos y más.
+
+                </p>
+            </div>
+            <div>
+                <a href="?page=tienda" title="Cuidados">
+                    <img src="img/cuidados.png" alt="No image" class="Cuidados">
+                    <h3>Cuidados</h3>
+                </a>
+                <p>Cuidado de la piel, champús y control de parásitos internos y externos para tu mascota.
+
+                </p>
+            </div>
+        </div>
     </section>
 </div>

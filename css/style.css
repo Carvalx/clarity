@@ -42,7 +42,8 @@ input[type="checkbox"]{
 /*****
 * body-index    index.php
 *****/
-.body-index {
+body {
+    border: 1px solid green;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -53,11 +54,11 @@ input[type="checkbox"]{
 .menu {
     display: flex;
     flex-direction: row;
-    flex: 1;
     position: fixed;
     background-color: #fdd7b5;
     justify-content: space-between;
     margin: 0;
+    top: 0;
     align-items: center;
     width: 100%;
     height: 7rem;
@@ -92,154 +93,30 @@ input[type="checkbox"]{
 }
 
 .menu li {
-    color: #6e3701;
+    color: #c26711;
 }
 
 .menu a {
-    color: #6e3701;
+    color: #c26711;
     font-weight: 500;
     transition: all 0.15s ease;
 }
 
 .menu a:hover {
     font-weight: bold;
-    color: #c26711;
-}
-
-/*****
-* extension
-*****/
-.extension {
-    margin: 7rem 0 0;
-    display: flex;
-    flex: 1 ;
-}
-
-/*****
-* inicio.php
-*****/
-.inicio {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-}
-
-.imagen-inicio {
-    background: url(../img/inicio1.jpg) no-repeat;
-    background-size: cover;
-    display: flex;
-    height: 35rem;
-    width: 100%;
-    align-items: center;
-}
-
-.imagen-titulo-inicio {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 0 0 6.5rem;
-    gap: 0.75rem;
-    height: 10rem;
-    width: 35rem;
-}
-
-.imagen-titulo-inicio h1,
-.imagen-titulo-inicio p {
-    text-align: center;
-    font-weight: bolder;
-    color: #6e3701;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);;
-}
-
-
-.imagen-titulo-inicio h1 {
-    font-size: 3rem;
-}
-
-.imagen-titulo-inicio p {
-    font-size: 1.5rem;
-    width: 35rem;
-}
-
-.inicio section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 2rem 0;
-}
-
-section h1 {
-    color: #c26711;
-}
-
-.divisor-seccion{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-weight: bolder;
-    margin: 3rem 0 0;
-}
-
-.icono-seccion {
-    width: 3rem;
-}
-
-.servicios-inicio {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 2.5rem 2rem;
-    justify-content: center;
-    align-items: center;
-}
-
-.servicios-inicio h3 {
-    text-decoration: underline;
-    color: #fa9333;
-}
-
-.servicios-inicio p {
-    font-size: 0.8rem;
-}
-
-.servicios-inicio div {
-    display: flex;
-    flex-direction: column;
-    width: 15rem;
-    height: 15rem;
-    align-items: center;
-    text-align: center;
-}
-
-.imagen-inicio a {
-    display: flex;
-    flex-direction: column;
-}
-
-.servicios-inicio img {
-    width: 5rem;
-    height: 5rem;
-    transition: all 0.17s ease;
-}
-
-.servicios-inicio img:hover {
-    width: 6rem;
-    height: 6rem;
 }
 
 /*****
 * footer.php
 *****/
 footer {
+    margin: 2rem 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    border-top: 0.1rem solid #8b4300;
 }
 
 .background-formulario {
@@ -439,4 +316,265 @@ h5 a {
 
 h5 a:hover {
     font-size: 0.85rem;
+}
+
+/*****
+* extension
+*****/
+.extension {
+    border: 1px solid red;
+    margin: 7rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/*****
+* inicio.php
+*****/
+.inicio {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.imagen-inicio {
+    background: url(../img/inicio1.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 35rem;
+    width: 100%;
+}
+
+.imagen-inicio div {
+    text-align: center;
+    bottom: 0;
+    left: 0;
+}
+
+.imagen-inicio h1,
+.imagen-inicio p {
+    color: #c26711;
+}
+
+.imagen-inicio p {
+    width: 30rem;
+    margin: 0 30rem 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+section h1 {
+    color: #c26711;
+}
+
+.divisor-seccion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bolder;
+    margin: 3rem 0 0;
+}
+
+.icono-seccion {
+    width: 3rem;
+}
+
+.servicios-inicio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 2.5rem 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios-inicio h3 {
+    text-decoration: underline;
+    color: #fa9333;
+}
+
+.servicios-inicio p {
+    font-size: 0.8rem;
+}
+
+.servicios-inicio div {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    height: 15rem;
+    align-items: center;
+    text-align: center;
+}
+
+.imagen-inicio a {
+    display: flex;
+    flex-direction: column;
+}
+
+.servicios-inicio img {
+    width: 5rem;
+    height: 5rem;
+    transition: all 0.17s ease;
+}
+
+.servicios-inicio img:hover {
+    width: 6rem;
+    height: 6rem;
+}
+
+.compromiso {
+    display: flex;
+    padding: 1rem 0 0 0;
+    width: 100%;
+    background: #E1DCD7;
+}
+
+.compromiso h2 {
+    margin: 0;
+}
+
+.compromiso p {
+    width: 70%;
+}
+
+.compromiso img {
+    width: 100%;
+}
+
+.pedrito {
+    height: 4rem;
+    width: 4.2rem;
+}
+
+.tienda-inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tienda-inicio-elementos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.tienda-inicio-elementos div {
+    border: 0.1rem solid gray;
+    width: 25rem;
+    height: 15rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+.tienda-inicio-elementos div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0.12rem -0.12rem 0rem 0.1rem #fdd7b5;
+}
+
+.tienda-inicio-elementos div p {
+    width: 20rem;
+}
+
+.tienda-inicio-elementos div a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tienda-inicio-elementos h3 {
+    text-decoration: underline;
+}
+
+.tienda-inicio-elementos div img {
+    width: 4rem;
+    margin: 0 2rem;
+    transition: all 0.17s ease;
+}
+
+.tienda-inicio-elementos div img:hover {
+    width: 5rem;
+}
+
+.tienda-inicio-elementos h3 {
+    color: #fa9333;
+}
+
+/*****
+* nosotros.php
+*****/
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.nosotros div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: justify;
+    align-items: center;
+    margin: 2rem 0 0;
+    gap: 3rem;
+    width: 80%;
+}
+
+.nosotros p {
+    width: 100%;
+    text-align: justify;
+}
+.nosotros div img {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+@media (min-width:1000px) and (max-width:1299.99px) {
+    html, body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    header {
+        display: flex;
+        flex: 1;
+    }
+
+    .menu img {
+        margin: 0 0 0 5rem;
+    }
+
+    .menu .menu-enlaces {
+        margin: 0 5rem 0 0;
+    }
+
+    .menu-enlaces a {
+        font-weight: 0.8rem;
+    }
+
+
 }
