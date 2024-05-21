@@ -20,6 +20,10 @@ h1 {
     white-space: pre-line;
 }
 
+h1 {
+    color: #c26711;
+}
+
 h2 {
     margin: 0 0 2rem 0;
     color:#c26711;
@@ -43,11 +47,8 @@ input[type="checkbox"]{
 * body-index    index.php
 *****/
 body {
-    border: 1px solid green;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
     margin: 0;
+    overflow-x: hidden;
 }
 
 /*Menu*/
@@ -96,6 +97,65 @@ body {
     color: #c26711;
 }
 
+.menu li button {
+    border: none;
+    background: none;
+    color: #c26711;
+    font-weight: 500;
+    font-size: 1.02rem;
+}
+
+.dropdown:hover .boton-servicios,
+.dropdown-content a:hover ~ .boton-servicios {
+    font-weight: bold;
+    background: #fbaa5f;
+    cursor: pointer;
+    height: 3rem;
+    border: #c26711 solid 0.1rem;
+    border-bottom: none;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.dropdown-content a {
+    background: #fdf5ee;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    border-bottom: 0.1rem solid #c26711;
+    border-left: 0.1rem solid #c26711;
+    border-right: 0.1rem solid #c26711;
+}
+
+.dropdown-content a:nth-child(1) {
+    border-top: 0.1rem solid #c26711;
+}
+
+.dropdown-content a:nth-child(8) {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
 .menu a {
     color: #c26711;
     font-weight: 500;
@@ -110,7 +170,7 @@ body {
 * footer.php
 *****/
 footer {
-    margin: 2rem 0 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -322,26 +382,16 @@ h5 a:hover {
 * extension
 *****/
 .extension {
-    border: 1px solid red;
     margin: 7rem 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 /*****
 * inicio.php
 *****/
-.inicio {
-    border: 1px solid blue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
 
 .imagen-inicio {
     background: url(../img/inicio1.jpg) no-repeat;
@@ -350,22 +400,33 @@ h5 a:hover {
     flex-direction: column;
     height: 35rem;
     width: 100%;
+    justify-content: center;
 }
 
 .imagen-inicio div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    bottom: 0;
-    left: 0;
+    align-items: center;
+    margin: 10% 50% 0 0;
 }
 
 .imagen-inicio h1,
 .imagen-inicio p {
-    color: #c26711;
+    text-shadow: 0 0 0 #fff,  
+    0 0 0 #fff,
+    0 0 0 #fff,
+    2px 2px 0 #fff;
+}
+
+.imagen-inicio h1 {
+    font-size: 2.5rem;
 }
 
 .imagen-inicio p {
-    width: 30rem;
-    margin: 0 30rem 0;
+    font-size: 1.4rem;
+    width: 35rem;
 }
 
 section {
@@ -378,13 +439,11 @@ section {
     margin: 2rem 0;
 }
 
-section h1 {
-    color: #c26711;
-}
-
 .divisor-seccion{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: center;
     align-items: center;
     font-weight: bolder;
     margin: 3rem 0 0;
@@ -552,29 +611,136 @@ section h1 {
     border-radius: 2rem;
 }
 
-@media (min-width:1000px) and (max-width:1299.99px) {
-    html, body {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
+/*****
+* donar-adoptar.php
+*****/
+.donacion,
+.adoptar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.adoptar {
+    border-bottom: 0.1rem solid #8b4300;
+}
+
+.donacion div,
+.adoptar div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 75%;
+    gap: 2rem;
+    margin: 2rem 0;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+}
+
+.donacion div p,
+.adoptar div p {
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.donacion div img,
+.adoptar div img {
+    border-radius: 2rem;
+    width: 99.5%;
+    transition: all 0.17s ease;
+}
+
+.adoptar div img:hover,
+.donacion div img:hover {
+    width: 100%;
+}
+
+/*****
+* contacto.php
+*****/
+.ubicacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 75%;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.ubicacion h2 {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.ubicacion p {
+    font-size: 1.15rem;
+}
+
+.ubicacion img {
+    width: 100%;
+    border-radius: 25% 2rem 25%;
+    box-shadow: 0.3rem -0.3rem 0.3rem #ffc48d;
+}
+
+.mapa {
+    margin: 0 0 3rem 0;
+    width: 50%;
+    height: 25rem;
+    border-radius: 2rem;
+    box-shadow: 0.3rem -0.2rem 0.2rem #ffc48d;
+}
+
+/***** Media *****/
+@media (min-width:900px) and (max-width:1299.99px) {
+
+    
+
+    .imagen-inicio h1 {
+        font-size: 1.9rem;
+        width: 30rem;
+        margin: 0 0 0.5rem;
     }
 
-    header {
-        display: flex;
-        flex: 1;
+    .imagen-inicio p {
+        font-size: 1.1rem;
+        width: 25rem;
     }
 
     .menu img {
-        margin: 0 0 0 5rem;
+        margin: 0 0 0 4rem;
     }
 
     .menu .menu-enlaces {
-        margin: 0 5rem 0 0;
+        margin: 0 3rem 0 0;
     }
 
-    .menu-enlaces a {
-        font-weight: 0.8rem;
+    .menu ul {
+        gap: 0.5rem;
     }
 
+    .menu .menu-enlaces li a {
+        font-size: 0.9rem;
+    }
+    
+    .servicios-inicio {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 2.5rem 2rem;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .tienda-inicio-elementos {
+        display: grid;
+        grid-template-columns: repeat(
+            2, minmax(25rem, 1fr)
+            );
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
 }

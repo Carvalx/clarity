@@ -41,13 +41,22 @@
     <!-- Pie de pagina -->
     <footer>
             <?php
+                if (!isset($_GET['page'])){
+                    $page = 'inicio';
+                    require_once "formulario.php";
+                    require_once "footer.php";
+                } 
+                else {
                 $page = $_GET['page'];
                 
-                if($page != 'acerca-nosotros') {
+                if($page != 'acerca-nosotros' && $page != 'donar-adoptar') {
                    require_once "formulario.php";
                 }
                 require_once "footer.php";
+                }
             ?>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

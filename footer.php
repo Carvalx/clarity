@@ -33,6 +33,7 @@
         <ul>
             <li>Av. del Primat Reig, 48, Benimaclet, 46010 València, Valencia</li>
             <li><p>(+34) 687 04 94 33</p></li>
+            <li><a href="mailto: carvadel@hotmail.com">carvadel@hotmail.com</a></li>
         </ul>
     </div>
     <hr>
