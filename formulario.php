@@ -10,25 +10,29 @@
                 <div class="item-formulario">
                     <label for="nombreForm">Nombre*:</label>
                     <input type="text" id="nombreForm" name="nombreForm" placeholder="Nombre..."
-                    required title="Nombre">
+                     autocapitalize="on" autocomplete="on" title="Nombre" required>
                 </div>
 
                 <div class="item-formulario">
-                    <label for="apellidoForm">Apellido:</label>
-                    <input type="text" id="apellidoForm" name="apellidoForm" placeholder="Apellido..." 
-                    data-opcional title="Apellido">
+                    <label for="asuntoForm">Asunto*:</label>
+                    <select class="asuntoForm" name="asuntoForm" id="asuntoForm" required>
+                        <option value="">---Seleccionar---</option>
+                        <option value="Consulta">Consulta</option>
+                        <option value="Adoptar un compañero">Adoptar un compañero</option>
+                        <option value="Donar">Donar comida</option>
+                    </select>
                 </div>
 
                 <div class="item-formulario">
                     <label for="correoForm">Correo*:</label>
                     <input type="email" id="correoForm" name="correoForm" placeholder="Correo..." 
-                    required title="Correo">
+                     title="Correo" required>
                 </div>
 
                 <div class="item-formulario">
                     <label for="telForm">Teléfono:</label>
                     <input type="tel" id="telForm" name="telForm" placeholder="Teléfono..." 
-                    data-opcional title="Teléfono">
+                    data-opcional title="Teléfono" autocomplete="on">
                 </div>
             </div>
 
@@ -37,7 +41,8 @@
             </div>
 
             <div class="confirmacionForm">
-                <input type="checkbox" id="confirmacion" name="confirmacion" required>
+                <input type="checkbox" id="confirmacion" name="confirmacion" required
+                autocapitalize="on" autocomplete="off">
                 <p>Acepto la <a href="?page=privacidad">política de privacidad</a> del Centro Veterinario Clarity Pet.</p>
             </div>
 

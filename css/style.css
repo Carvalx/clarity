@@ -43,6 +43,22 @@ input[type="checkbox"]{
 ::placeholder {
     font-style: italic;
 }
+
+/*****
+*   Errores
+*****/
+.errores-php {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.confirmacion-php {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
 /*****
 * body-index    index.php
 *****/
@@ -53,6 +69,7 @@ body {
 
 /*Menu*/
 .menu {
+    /*opacity: 0.5;*/
     display: flex;
     flex-direction: row;
     position: fixed;
@@ -236,6 +253,17 @@ footer {
     border-radius: 0.5rem;
     padding: 0 0.5rem;
     border: none;
+}
+
+.item-formulario select {
+    border: none;
+    height: 2rem;
+    border-radius: 0.5rem;
+}
+
+select option {
+    border: none;
+    height: 2rem;
 }
 
 .textarea {
@@ -691,6 +719,95 @@ section {
     height: 25rem;
     border-radius: 2rem;
     box-shadow: 0.3rem -0.2rem 0.2rem #ffc48d;
+}
+
+/*****
+* login.php
+*****/
+.body-login {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff6ed;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.contenedor-iniciar-sesion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcb777;
+    width: 25rem;
+    border-radius: 2rem;
+}
+
+.contenedor-iniciar-sesion img {
+    margin: 2rem 0 0;
+    width: 15rem;
+}
+
+.contenedor-iniciar-sesion form {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+}
+
+.contenedor-iniciar-sesion form label {
+    margin: 1.5rem 0 0;
+    padding: 0 0 0 0.5rem;
+    font-weight: bold;
+}
+
+.contenedor-iniciar-sesion form button {
+    height: 2.5rem;
+    background: #c26711;
+    border: none;
+    border-radius: 0.4rem;
+    color: #fff;
+    margin: 2rem 0 0;
+    padding: 0;
+    font-weight: 500;
+    transition: all 0.17s ease;
+}
+
+.contenedor-iniciar-sesion form button:hover {
+    font-weight: bold;
+}
+
+.contenedor-iniciar-sesion form input {
+    height: 2.2rem;
+    border: none;
+    border-radius: 0.4rem;
+    margin: 0.2rem 0 0rem;
+    
+}
+
+.contenedor-iniciar-sesion form div {
+    width: 100%;
+}
+
+.contenedor-iniciar-sesion input,
+.contenedor-iniciar-sesion button,
+.contenedor-iniciar-sesion a {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contenedor-iniciar-sesion a {
+    margin: 0 0 3rem;
+    text-align: center;
+    color: #c26711;
+    font-weight: 500;
+    transition: all 0.17s ease;
+}
+
+.contenedor-iniciar-sesion a:hover {
+    font-weight: bold;
 }
 
 /***** Media *****/
