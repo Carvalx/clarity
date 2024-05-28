@@ -10,7 +10,7 @@ require "PHPMailer/src/Exception.php";
 
 //Cuando "enviar" sea validado en el formulario obtendremos las variables
 if(isset($_POST["enviar"])) {
-    echo "Funcion de condicional luego de post.<br><br>";
+    /*echo "Funcion de condicional luego de post.<br><br>";*/                       //MENSAJE PARA MOSTRAR QUE SE ACCIONÓ EL BOTÓN ENVIAR
     //Variables del formulario
     $nombre = $_POST["nombreForm"];
     $asunto = $_POST["asuntoForm"];
@@ -50,14 +50,16 @@ if(isset($_POST["enviar"])) {
         $msj .= "Descripción del mensaje:";
         $msj .= "<p>" .$mensaje ."</p>";
         $msj .= "---Este mensaje se ha enviado desde el sitio web Clarity Pet---";
+
+        $reply = "Gracias por tu mensaje, $nombre. Hemos recibido tu mensaje y te responderemos pronto.";
         
 
-        $mail = new PHPMailer(true);    //Indicamos que trabajaremos con Excepciones
-
+        $mail = new PHPMailer(true);                                            //Indicamos que trabajaremos con Excepciones
+        $confirmationMail = new PHPMailer(true);                                //Indicamos que trabajaremos con Excepciones
         //Capturamos las Excepciones con el siguiente try
         try {
             //Trabajamos con el objeto $mail
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                              //Mostrar errores si el correo o contraseña esta incorrecta
+            $mail->SMTPDebug = SMTP::DEBUG_OFF;                              //Mostrar errores si el correo o contraseña esta incorrecta
             $mail->isSMTP();                                                    //Indicamos el uso de este protocolo
             $mail->Host = "smtp.gmail.com";                                     //Dominio
             $mail->SMTPAuth = true;                 
@@ -67,7 +69,7 @@ if(isset($_POST["enviar"])) {
             $mail->Port = 465;                                                  //Puerto
             
             $mail->setFrom("carvalxfrost@gmail.com", "Web de Clarity Pet");     //Mostrar desde donde se envía
-            $mail->addAddress($correo, $nombre);                                //Correo adicional donde llegarán los mensajes
+            $mail->addAddress("maceroconsultores2014@hotmail.com", "Napo");                              //Correo adicional donde llegarán los mensajes
             //$mail->addReplyTo("carvadel@hotmail.com");                        //Donde va a responder el cliente
 
             $mail->isHTML(true);                                                //Usamos tags HTML para enviar el mensaje
@@ -76,7 +78,26 @@ if(isset($_POST["enviar"])) {
 
             $mail->send();                                                      //Enviar mail
 
-            $confirmacion = "Correo enviado!.";
+            // Configuración para enviar el correo de confirmación al remitente     
+            $confirmationMail->isSMTP();
+            $confirmationMail->Host = "smtp.gmail.com";
+            $confirmationMail->SMTPAuth = true;
+            $confirmationMail->Username = "carvalxfrost@gmail.com";
+            $confirmationMail->Password = "ptym yfdg mgpy pqrw";
+            $confirmationMail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $confirmationMail->Port = 465;
+
+            $confirmationMail->setFrom("carvalxfrost@gmail.com", "Web de Clarity Pet");
+            $confirmationMail->addAddress($correo, $nombre);                   // Correo del remitente
+
+            $confirmationMail->isHTML(true);
+            $confirmationMail->Subject = mb_convert_encoding("Confirmación de recepción de mensaje", "ISO-8859-1", "UTF-8");
+            $confirmationMail->Body = mb_convert_encoding($reply, "ISO-8859-1", "UTF-8");
+
+            $confirmationMail->send();
+
+            /*$confirmacion = "Correo enviado!.";*/                             //MOSTRAR EL ENVIO DEL FORMULARIO
+            header("Location:index.php");
         } catch (Exception $e) {
             $confirmacion = "Mensaje". $mail->ErrorInfo;                        //Mostrar errores en el mail enviado mediante Exceptions
         }

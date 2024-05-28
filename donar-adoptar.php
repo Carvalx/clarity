@@ -3,7 +3,7 @@
 </div>
 
 <div class="donacion">
-    <h2>Haz donación de comida</h2>
+    <h2>Has donación de comida</h2>
     <div>
         <p>Erradiquemos el hambre de los animales abandonados: con tu ayuda, podemos darles una vida digna y llena de amor. ¡Únete a nuestra causa y haz la diferencia!
 
@@ -35,39 +35,44 @@
             <p>Con gusto te ayudaremos en brindarte asesoramiento. Apreciaremos mucho tus acciones. Gracias.</p>
         </div>
 
-        <form action="">
+        <form action="enviar-formulario.php" method="POST">
             <div class="formulario">
                 <div class="item-formulario">
                     <label for="nombreForm">Nombre*:</label>
-                    <input type="text" id="nombreForm" placeholder="Nombre..." required
-                    title="Nombre">
+                    <input type="text" id="nombreForm" name="nombreForm" placeholder="Nombre..."
+                     autocapitalize="on" autocomplete="on" title="Nombre" required>
                 </div>
 
                 <div class="item-formulario">
-                    <label for="apellidoForm">Apellido:</label>
-                    <input type="text" id="apellidoForm" placeholder="Apellido..." data-opcional
-                    title="Apellido">
+                    <label for="asuntoForm">Asunto*:</label>
+                    <select class="asuntoForm" name="asuntoForm" id="asuntoForm" required>
+                        <option value="">---Seleccionar---</option>
+                        <option value="Consulta">Consulta</option>
+                        <option value="Adoptar un compañero">Adoptar un compañero</option>
+                        <option value="Donar">Donar comida</option>
+                    </select>
                 </div>
 
                 <div class="item-formulario">
                     <label for="correoForm">Correo*:</label>
-                    <input type="email" id="correoForm" placeholder="Correo..." required
-                    title="Correo">
+                    <input type="email" id="correoForm" name="correoForm" placeholder="Correo..." 
+                     title="Correo" required>
                 </div>
 
                 <div class="item-formulario">
                     <label for="telForm">Teléfono:</label>
-                    <input type="tel" id="telForm" placeholder="Teléfono..." data-opcional
-                    title="Teléfono">
+                    <input type="tel" id="telForm" name="telForm" placeholder="Teléfono..." 
+                    data-opcional title="Teléfono" autocomplete="on">
                 </div>
             </div>
 
             <div class="textarea">
-                <textarea name="textarea" id="textArea" placeholder="Escribe tu consulta aquí..." minlength="0" maxlength="750"></textarea>
+                <textarea name="textArea" id="textArea" placeholder="Escribe tu consulta aquí..." minlength="0" maxlength="750"></textarea>
             </div>
 
             <div class="confirmacionForm">
-                <input type="checkbox" id="confirmacion" required>
+                <input type="checkbox" id="confirmacion" name="confirmacion" required
+                autocapitalize="on" autocomplete="off">
                 <p>Acepto la <a href="?page=privacidad">política de privacidad</a> del Centro Veterinario Clarity Pet.</p>
             </div>
 

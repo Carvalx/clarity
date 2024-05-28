@@ -29,6 +29,11 @@ h2 {
     color:#c26711;
 }
 
+h4 {
+    margin: 0;
+    color:#c26711;
+}
+
 li {
     list-style: none;
 }
@@ -808,6 +813,301 @@ section {
 
 .contenedor-iniciar-sesion a:hover {
     font-weight: bold;
+}
+
+/*****
+* medicina-general.php
+*****/
+.med-gen div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 0 0 2.5rem;
+    align-items: center;
+}
+
+.med-gen img {
+    width: 30rem;
+    height: 25rem;
+    border-radius: 2rem;
+}
+
+.med-gen p {
+    width: 30rem;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+/*****
+* diagnostico.php
+*****/
+.diagnostico {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 2rem 0 3rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.diagnostico img {
+    width: 40rem;
+    height: 33rem;
+    border-radius: 2rem;
+}
+
+.diagnostico div {
+    text-align: justify;
+    width: 38rem;
+    font-size: 1.3rem;
+}
+
+.diagnostico div ul {
+    margin: 3rem 0 0;
+    font-size: 1.2rem;
+}
+
+.diagnostico div li {
+    list-style:square;
+}
+
+/*****
+* cirugias.php
+*****/
+.cirugias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 2rem 0 3rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.cirugias img {
+    width: 40rem;
+    height: 33rem;
+    border-radius: 2rem;
+}
+
+.cirugias div {
+    text-align: justify;
+    width: 38rem;
+    font-size: 1.3rem;
+}
+
+.cirugias div ul {
+    margin: 3rem 0 0;
+    font-size: 1.2rem;
+}
+
+.cirugias div li {
+    list-style:square;
+}
+
+/*****
+* laboratorio.php
+*****/
+.laboratorio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 2rem 0 3rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.laboratorio img {
+    width: 40rem;
+    height: 36rem;
+    border-radius: 2rem;
+}
+
+.laboratorio div {
+    text-align: justify;
+    width: 38rem;
+    font-size: 1.3rem;
+}
+
+.laboratorio div ul {
+    margin: 3rem 0 0;
+    font-size: 1.2rem;
+}
+
+.laboratorio div li {
+    list-style:square;
+}
+
+/*****
+* asesoramiento.php
+*****/
+
+.asesoramiento {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 2rem 0 3rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.asesoramiento img {
+    width: 40rem;
+    height: 36rem;
+    border-radius: 2rem;
+}
+
+.asesoramiento div {
+    text-align: justify;
+    width: 38rem;
+    font-size: 1.3rem;
+}
+
+.asesoramiento div ul {
+    margin: 3rem 0 0;
+    font-size: 1.2rem;
+}
+
+.asesoramiento div li {
+    list-style:square;
+}
+
+/*****
+* adiestramiento.php
+*****/
+.adiestramiento {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 2rem 0 3rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.adiestramiento img {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 2rem;
+}
+
+.adiestramiento div {
+    text-align: justify;
+    width: 38rem;
+    font-size: 1.3rem;
+}
+
+.adiestramiento div ul {
+    margin: 3rem 0 0;
+    font-size: 1.2rem;
+}
+
+.adiestramiento div li {
+    list-style:square;
+}
+
+/*****
+* tienda.php
+*****/
+.tienda {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 2rem 0 3rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.tienda img {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 2rem;
+}
+
+.tienda div {
+    text-align: justify;
+    width: 38rem;
+    font-size: 1.3rem;
+}
+
+.tienda div ul {
+    margin: 3rem 0 0;
+    font-size: 1.2rem;
+}
+
+.tienda div li {
+    list-style:square;
+}
+
+/*****
+* laserterapia.php
+*****/
+.laserterapia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 2rem 0 3rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.laserterapia img {
+    width: 40rem;
+    height: 32rem;
+    border-radius: 2rem;
+}
+
+.laserterapia div {
+    text-align: justify;
+    width: 38rem;
+    font-size: 1.3rem;
+}
+
+.laserterapia div ul {
+    margin: 3rem 0 0;
+    font-size: 1.2rem;
+}
+
+.laserterapia div li {
+    list-style:square;
+}
+
+/*****
+* aviso-legal.php
+*****/
+.aviso-legal {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 2rem 0 3rem 0;
+    justify-content: center;
+    width: 80%;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.aviso-legal img {
+    width: 40rem;
+    height: 32rem;
+    border-radius: 2rem;
+    float: right;
+    margin: 2rem;
+}
+
+/*****
+* politica-privacidad.php
+*****/
+.politica-privacidad {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 2rem 0 3rem 0;
+    justify-content: center;
+    width: 80%;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.politica-privacidad li{
+    list-style: upper-roman;
 }
 
 /***** Media *****/

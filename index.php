@@ -23,7 +23,7 @@
     </header>
 
     <!-- Contenido de la pagina a la que se redirige -->
-    <div class="extension">
+    <section class="extension">
         <?php
             //Por default añade al documento inicio.php o añadira otra pagina en caso de ser seleccionada.
             if (!isset($_GET['page'])){
@@ -36,7 +36,7 @@
             //Añade el contenido de la pagina seleccionada mediante una variable y agregando con string el dominio php
             require_once $page . '.php';   
         ?>
-    </div>
+    </section>
 
     <!-- Pie de pagina -->
     <footer>
@@ -49,7 +49,9 @@
                 else {
                 $page = $_GET['page'];
                 
-                if($page != 'acerca-nosotros' && $page != 'donar-adoptar') {
+                if($page != 'acerca-nosotros' && $page != 'donar-adoptar' && 
+                $page != "politica-privacidad" && $page != "aviso-legal"
+                && $page != "contacto") {
                    require_once "formulario.php";
                 }
                 require_once "footer.php";

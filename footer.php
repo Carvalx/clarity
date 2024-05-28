@@ -11,12 +11,11 @@
     <div class="item-footer">
         <h3>Enlaces de Interés:</h3>
         <ul>
-            <li><a href="">Medicina General</a></li>
-            <li><a href="">Diagnóstico</a></li>
-            <li><a href="">Cirugías</a></li>
-            <li><a href="">Política de Privacidad</a></li>
-            <li><a href="">Aviso legal</a></li>
-            <li><a href="">Política de cookies</a></li>
+            <li><a href="?page=medicina-general">Medicina General</a></li>
+            <li><a href="?page=diagnostico">Diagnóstico</a></li>
+            <li><a href="?page=cirugias">Cirugías</a></li>
+            <li><a href="?page=politica-privacidad">Política de privacidad</a></li>
+            <li><a href="?page=aviso-legal">Aviso legal</a></li>
         </ul>
     </div>
     <div class="item-footer">

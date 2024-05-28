@@ -20,6 +20,13 @@
                         <option value="Consulta">Consulta</option>
                         <option value="Adoptar un compañero">Adoptar un compañero</option>
                         <option value="Donar">Donar comida</option>
+                        <option value="Medicina General">Medicina General</option>
+                        <option value="Diagnóstico">Diagnóstico</option>
+                        <option value="Cirugías">Cirugías</option>
+                        <option value="Laboratorio">Laboratorio</option>
+                        <option value="Asesoramiento">Asesoramiento</option>
+                        <option value="Laserterapía">Laserterapía</option>
+                        <option value="Adiestramiento">Adiestramiento</option>
                     </select>
                 </div>
 
