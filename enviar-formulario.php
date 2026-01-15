@@ -10,7 +10,7 @@ require "PHPMailer/src/Exception.php";
 
 //Cuando "enviar" sea validado en el formulario obtendremos las variables
 if(isset($_POST["enviar"])) {
-    /*echo "Funcion de condicional luego de post.<br><br>";*/                       //MENSAJE PARA MOSTRAR QUE SE ACCIONÓ EL BOTÓN ENVIAR
+    /*echo "Funcion de condicional luego de post.<br><br>";*/                       //MENSAJE PARA MOSTRAR QUE SE ACCIONÓ EL BOTÓN ENVIAR*****
     //Variables del formulario
     $nombre = $_POST["nombreForm"];
     $asunto = $_POST["asuntoForm"];
@@ -24,6 +24,8 @@ if(isset($_POST["enviar"])) {
     //Filtramos cada variable
     if(empty($nombre)) {
         $errores[] = "El campo de nombre es obligatorio.";
+    } else if (preg_match('/\s/', $nombre)) {
+        $errores[] = "El nombre no debe contener espacios.";
     }
 
     if(!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
@@ -59,7 +61,7 @@ if(isset($_POST["enviar"])) {
         //Capturamos las Excepciones con el siguiente try
         try {
             //Trabajamos con el objeto $mail
-            $mail->SMTPDebug = SMTP::DEBUG_OFF;                              //Mostrar errores si el correo o contraseña esta incorrecta
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER; //Cambiar a DEBUG_OFF        //Mostrar errores si el correo o contraseña esta incorrecta
             $mail->isSMTP();                                                    //Indicamos el uso de este protocolo
             $mail->Host = "smtp.gmail.com";                                     //Dominio
             $mail->SMTPAuth = true;                 
@@ -68,8 +70,8 @@ if(isset($_POST["enviar"])) {
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;                    //Revisar el Hosting dependiendo de como este habilitado
             $mail->Port = 465;                                                  //Puerto
             
-            $mail->setFrom("carvalxfrost@gmail.com", "Web de Clarity Pet");     //Mostrar desde donde se envía
-            $mail->addAddress("maceroconsultores2014@hotmail.com", "Napo");                              //Correo adicional donde llegarán los mensajes
+            $mail->setFrom("carvalxfrost@gmail.com", "Web de Clarity Pet");     //Mostrar desde donde se envía                  *****
+            $mail->addAddress("carvadel@hotmail.com", "Napo");     //Correo adicional donde llegarán los mensajes  *****
             //$mail->addReplyTo("carvadel@hotmail.com");                        //Donde va a responder el cliente
 
             $mail->isHTML(true);                                                //Usamos tags HTML para enviar el mensaje
@@ -88,7 +90,7 @@ if(isset($_POST["enviar"])) {
             $confirmationMail->Port = 465;
 
             $confirmationMail->setFrom("carvalxfrost@gmail.com", "Web de Clarity Pet");
-            $confirmationMail->addAddress($correo, $nombre);                   // Correo del remitente
+            $confirmationMail->addAddress($correo, $nombre);                   // Correo del remitente                          *****
 
             $confirmationMail->isHTML(true);
             $confirmationMail->Subject = mb_convert_encoding("Confirmación de recepción de mensaje", "ISO-8859-1", "UTF-8");
@@ -96,7 +98,7 @@ if(isset($_POST["enviar"])) {
 
             $confirmationMail->send();
 
-            /*$confirmacion = "Correo enviado!.";*/                             //MOSTRAR EL ENVIO DEL FORMULARIO
+            /*$confirmacion = "Correo enviado!.";*/                             //MOSTRAR EL ENVIO DEL FORMULARIO               *****
             header("Location:index.php");
         } catch (Exception $e) {
             $confirmacion = "Mensaje". $mail->ErrorInfo;                        //Mostrar errores en el mail enviado mediante Exceptions

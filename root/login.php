@@ -26,6 +26,7 @@
 
         <!-- Link de contraseña olvidada -->
         <a href="#">¿Haz olvidado tu contraseña?</a>
+        <a href="registro.php">Crea una cuenta</a>
     </div>
 </body>
 </html>
